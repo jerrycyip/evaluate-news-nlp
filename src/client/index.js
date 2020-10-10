@@ -1,5 +1,6 @@
-import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
+//revisit this
+import { checkForName } from './js/nameChecker'
 
 import './styles/resets.scss'
 import './styles/base.scss'

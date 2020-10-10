@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Sentiment Analysis using NLP</title>
+    <link rel="stylesheet" href="/styles/resets.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/form.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+</head>
 
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+<body>
 
-        <main>
+    <header>
+        <h1>Natural Language Processing of Articles & Blogs</h1>
+    </header>
+    <main>
+        <section class="form">
+            <h1>Text Sentiment Analysis</h1>
+            <fieldset>
+                <label>Please enter URL or text of article or blog:</label>
+                <input type="text" name="text" id="text" />
+            </fieldset>
+            <label>
+                Please select corresponding input type
+            </label>
+            <fieldset>
+                <input type="radio" id="radio-word" name="url" value="text" checked />
+                <label for="url">URL</label>
+            </fieldset>
+            <button type="submit" id="btn-submit" onclick="return Client.handleSubmit(event)"
+                onsubmit="return Client.handleSubmit(event)">
+                submit
+            </button>
+            </form>
             <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
             <section>
-
-            <section>
-                <strong>Form Results:</strong>
+                <strong>Analysis Results:</strong>
                 <div id="results"></div>
             </section>
-        </main>
+    </main>
+    <footer>
+        <div id="footer">Text Sentiment Analysis created & designed by Jerry Yip (https://github.com/jerrycyip)</div>
+    </footer>
+    <script>
+        // Check that service workers are supported (prod only)
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
 
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-        <script>
-            // Check that service workers are supported (prod only)
-            if ('serviceWorker' in navigator) {
-                // Use the window load event to keep the page load performant
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            }
-           </script>
-    </body>
 </html>

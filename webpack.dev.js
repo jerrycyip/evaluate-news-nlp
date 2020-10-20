@@ -11,7 +11,12 @@ module.exports = {
     },
     mode: 'development',
     devtool: 'source-map',
-    stats: 'verbose',
+    // address errors with latest loader/plugin versions:
+    node: {
+        fs: "empty",
+        net: "empty"
+     },
+    //stats: 'verbose',
     module: {
         rules: [
             {
@@ -22,6 +27,23 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader'
+            },
+            {
+                test: /\.(png|jp(e*)g|svg)$/,  
+                use: [
+                    'file-loader',
+                ]
+                /*[{
+                    loader: 'url-loader', 
+                    options: { 
+                        limit: 800000, // Convert images < 8kb to base64 strings
+                        name: './src/client/assets/[hash]-[name].[ext]'
+                    }
+                }]*/
             }
         ]
     },

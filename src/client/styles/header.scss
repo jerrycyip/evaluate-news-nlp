@@ -1,5 +1,40 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Open+Sans:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gidugu&family=Open+Sans:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&family=Saira+Stencil+One&display=swap');
+*/
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@600;700&family=Open+Sans:wght@700;800&display=swap');
+
 header {
     display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 30px;
+    background-color: #c3e0f2; // #38bdec; /*#052741;// #0b3b6d;/* #0e71c9; /*#18317a;*/
+    background-color: #052741;
+    font-family: 'Kodchasan', sans-serif;    //opacity: 0%;
+    //font-family: 'Saira Stencil One', cursive;
+    //font-family: 'Monoton', cursive;
+    //font-family: 'Open Sans', sans-serif;
+    //font-family: 'Gidugu', sans-serif;
 }
+
+h1 {
+    color: white; //#0b3b6d;
+    font-size: 2.25em;
+    text-align: center;
+    //font-weight: 900;
+}
+p {
+    margin-left: -395px;
+    padding-top: 20px;
+}
+sub {
+    vertical-align: sub;
+    font-size: 0.5em;
+    color: orange;
+    
+}
+h1 a {
+    text-decoration: none;
+}
+

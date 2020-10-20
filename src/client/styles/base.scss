@@ -1,14 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@600&family=Open+Sans:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Open+Sans:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gidugu&family=Open+Sans:wght@700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open+Sans', sans-serif;
+    font-family: 'Kodchasan', sans-serif;    //opacity: 0%;
+    line-height: 1.25em;
+    /*font-family: 'Gidugu', sans-serif;
+    font-size: 1.5em;
+    font-weight: 100;
+    line-height: 0.7em;*/
+
+}
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    //font-family: 'Open Sans', sans-serif;
+    //font-family: 'Kodchasan', sans-serif;
 }
-
 main {
     flex: 2;
 }
 
 section {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 20px auto;
+}
+
+#intro{
+    display: flex;
+    justify-content: center;
+}
+#ai-image {
+    width: 50%;
+    min-width: 320px;
+    height: auto;
+    margin-top: 20px;
+    border: 3px solid #052741;
+    border-radius: 5px;
+    //border-top-right-radius: 5px;    
+}
+#intro-text {
+    margin-top: 10px;
+    width: 50%;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #c3e0f2; // #ffd966;
+    //border: 1px solid #052741;
+    border-radius: 5px;
+    border: 2px solid #052741;
+    //border-bottom-right-radius: 5px;     
+}
+#intro-text h1 {
+ text-align: center;
+ font-size: 1.2em;
+ font-weight: 700;
+ color: #052741;
+ text-decoration: underline;
+ 
+}
+p.intro-text{
+    width: 90%;
+    min-width: 310px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    //font-size: 1em;
+    //font-weight: 300;
+    //margin-top: 10px;
+    padding: 5px;
+}
+
+#results {
+    width: 50%;
+    //display: flex;
+    //justify-content: center;
+    text-align: center;
+    border: 2px solid #052741;
+    padding: 20px;
+    border-radius: 5px;
+}
+#results h3{
+    display: block;
+    text-decoration: underline;
+    font-size: 1.25em;
+}
+#results div{
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }

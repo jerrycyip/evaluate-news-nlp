@@ -3,58 +3,79 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Text Sentiment Analysis using NLP</title>
-    <link rel="stylesheet" href="/styles/resets.css">
-    <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/header.css">
-    <link rel="stylesheet" href="/styles/form.css">
-    <link rel="stylesheet" href="/styles/footer.css">
+    <meta name="viewport" content="width=device-width, maximum-scale=1" />
+    <title>News Analysis using AI</title>
 </head>
 
 <body>
 
     <header>
-        <h1>Natural Language Processing of Articles & Blogs</h1>
+        <h1>News Analysis using AI <h1>
+            <p><a href="https://www.meaningcloud.com/"><sub>powered by MeaningCloud API</sub></a></p>
     </header>
     <main>
-        <section class="form">
-            <h1>Text Sentiment Analysis</h1>
+        <div id="intro">
+            <img id="ai-image" src="../assets/artsy-ai.jpg" height="300px" width=auto
+                alt="artificial intelligence network" />
+        </div>
+        <div id="intro-text">
+            <!-- <h1>Evaluate a News Article with NLP</h1> -->
+            <p class="intro-text">Natural Language Processing (NLP) is a branch of AI that focuses on the ability of
+                computer programs to process and analyze natural language data. 
+                <br>Using MeaningCloud's NLP APIs, 
+                we are able to instantly analyze news articles and blogs to summarize their content
+                and provide a variety of insights.
+            </p>
+        </div>
+        <form id="submit-form">
+            <h3>Enter a news article or blog link to try it out!</h3>
             <fieldset>
-                <label>Please enter URL or text of article or blog:</label>
-                <input type="text" name="text" id="text" />
-            </fieldset>
-            <label>
-                Please select corresponding input type
-            </label>
-            <fieldset>
-                <input type="radio" id="radio-text" name="text" value="text"/>
-                <label for="text">Text</label>
-                <input type="radio" id="radio-url" name="url" value="url"/>
-                <label for="url">URL</label>
+            <label></label>
+            <input type="text" name="url" id="url" placeholder="URL: https://www.cnn.com/2021/01/01/newstory/index.html" />
             </fieldset>
             <button type="submit" id="btn-submit" onclick="return Client.handleSubmit(event)"
-                onsubmit="return Client.handleSubmit(event)">
-                submit
-            </button>
-            </form>
-            <section>
-            <section>
-                <strong>Analysis Results:</strong>
-                <div id="results"></div>
-            </section>
+            onsubmit="return Client.handleSubmit(event)">
+            Analyze Text
+        </button>
+    </form>
+ <!--       <section class="form">
+            <form>
+                <h3>Enter URL for analysis</h3>
+                <fieldset>
+                    <label>URL:</label>
+                    <input type="text" name="text" id="text" />
+                </fieldset>
+                
+                <button type="submit" onclick="return Client.handleSubmit(event)"
+                    onsubmit="return Client.handleSubmit(event)">
+                    Submit
+                </button> 
+            </form> 
+        </section>-->
+        <section  id="results">
+            <h3><strong>Analysis Results:</strong></h3>
+            <div>summary analysis and a lot of words to fill up this section
+                summary analysis and a lot of words to fill up this section
+                summary analysis and a lot of words to fill up this section
+                summary analysis and a lot of words to fill up this section
+                summary analysis and a lot of words to fill up this section
+            </div>
+        </section>
     </main>
     <footer>
-        <div id="footer">Text Sentiment Analysis created & designed by Jerry Yip (https://github.com/jerrycyip)</div>
+        <div id="footer">Created & designed by Jerry Yip
+            <sub>powered by MeaningCloud API</sub>
+        </div>
     </footer>
     <script>
         // Check that service workers are supported (prod only)
-        if ('serviceWorker' in navigator) {
+        /*if ('serviceWorker' in navigator) {
             // Use the window load event to keep the page load performant
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/service-worker.js');
             });
-        }
+        }*/
     </script>
 </body>
+
 </html>

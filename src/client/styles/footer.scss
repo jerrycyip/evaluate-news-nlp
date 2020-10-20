@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Open+Sans:wght@700;800&display=swap');
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 40px;
+    background-color: #c3e0f2; /*#052741;// #0b3b6d;/* #0e71c9; /*#18317a;*/
+//    background-color: #0b3b6d;/* #0e71c9; /*#18317a;*/
+    background-color: #052741;
+    font-family: 'Kodchasan', sans-serif;    //opacity: 0%;
+
+
+   // opacity: 60%;
+}
+
+#footer {
+    color: white; //white;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+sub {
+    vertical-align: sub;
+    font-size: 0.75em;
+    color: orange;
+  }

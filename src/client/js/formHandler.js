@@ -6,21 +6,15 @@ async function handleSubmit(event) {
     
     // retrieve input URL
     let url = document.getElementById('url').value;
-
-
-    const validURL = Client.validateInput(url);
-    if(validURL){
+    const validatedURL = Client.validateInput(url);
+    if(validatedURL){
         // Post the request to the server
-        postRequest('http://localhost:8081/api', {url})
+        postRequest('http://localhost:8081/api', {validatedURL})
     }
     else {
-        console.log(validatedInput);
-        alert("Error: Please check that the URL is a valid address (e.g. https://www.cnn.com/2021/01/01/newstory/index.html)");
+        console.log(validatedURL);
+        alert("Error: Invalid URL. Please check that the URL is a valid address (e.g. https://www.cnn.com/2021/01/01/newstory/index.html)");
     };
-
-    // fetch the sentiment analysis results from Express server
-    const sentiment = await fetch("http://localhost:8081/sentiment");
-    const sentimentJson = await sentiment.json();
 
     // update UI with the sentiment analysis results
     //Client.updateUI(sentimentJson, validatedInput);
@@ -29,13 +23,14 @@ async function handleSubmit(event) {
 // Post fetch request to server with provided URL
 export const postRequest  = async (url= '', data={})=>{
     const rest = await fetch(url, {
-        method: "POST",
+        method: 'POST',
         credentials: 'same-origin',
+        mode: 'cors', // is this necessary?
         headers: {
             'Content-Type': 'application/json;charset=UTF-8'
         },
-        body: JSON.stringify(validURL),
-    })
+        body: JSON.stringify(data),
+    });
     try {
         const data = await res.json();
         return data;

@@ -7,7 +7,7 @@ function validateInput(text) {
     if (regex.test(text)) {
         return true;
     } else {
-        return "Invalid url!!! URL should look similiar to www.example.com";
+        return false;
     }
 
 }

@@ -4,6 +4,7 @@ import { validateInput } from "./formValidator";
 async function handleSubmit(event) {
     event.preventDefault()
     
+    
     // retrieve input URL
     let inputUrl = document.getElementById('url').value;
     if(Client.validateInput(inputUrl)){
@@ -15,7 +16,7 @@ async function handleSubmit(event) {
             const results = document.getElementById('results');
             const resultsSummary = document.getElementById('results-summary');
             
-            results.innerHTML = `Polarity: ${res.score_tag} <br>
+            results.innerHTML = `Sentiment (Polarity): ${res.score_tag} <br>
                                           Subjectivity: ${res.subjectivity} <br>
                                           Confidence: ${res.confidence} <br>
                                           Agreement: ${res.agreement} <br>
@@ -31,8 +32,8 @@ async function handleSubmit(event) {
             */
         })
     } else {
-        console.log(inputURL);
         alert("Error: Invalid URL. Please check that the URL is a valid address (e.g. https://www.cnn.com/2021/01/01/newstory/index.html)");
+        console.log(inputURL);
     };
     }
 

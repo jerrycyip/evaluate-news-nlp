@@ -45,6 +45,8 @@ Also install the following npm packages that are used by the express server:
 npm i --save path
 npm i --save body-parser
 npm i --save cors
+install fetch-node (or axios) for api fetch requests to MeaningCloud's APIs
+npm i fetch-node --save-dev
 
 ## Setting up the API
 

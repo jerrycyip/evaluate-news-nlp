@@ -38,5 +38,8 @@ button {
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    
+}
+input:focus {
+    outline: none; //1px solid #052741;
+    box-shadow: 0 0 0.5pt 0.5pt #052741; // orange;// rgb(102, 89, 64);// // rgb(102, 89, 64);
 }

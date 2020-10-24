@@ -8,7 +8,7 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 20px 30px;
+    padding: 15px 30px;
     background-color: #c3e0f2; // #38bdec; /*#052741;// #0b3b6d;/* #0e71c9; /*#18317a;*/
     background-color: #052741;
     font-family: 'Kodchasan', sans-serif;    //opacity: 0%;
@@ -24,7 +24,7 @@ h1 {
     text-align: center;
     //font-weight: 900;
 }
-p {
+header p {
     margin-left: -395px;
     padding-top: 20px;
 }
@@ -32,7 +32,6 @@ sub {
     vertical-align: sub;
     font-size: 0.5em;
     color: orange;
-    
 }
 h1 a {
     text-decoration: none;

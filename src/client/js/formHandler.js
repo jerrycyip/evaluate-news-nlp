@@ -12,8 +12,23 @@ async function handleSubmit(event) {
         postRequest('http://localhost:8082/api', {url: inputUrl})
         // update UI with the analysis results
         .then(function(res) {
-            const resultsContainer = document.getElementById('results');
-            resultsContainer.innerHTML = `Polarity: ${res.score_tag}`;
+            const results = document.getElementById('results');
+            const resultsSummary = document.getElementById('results-summary');
+            
+            results.innerHTML = `Polarity: ${res.score_tag} <br>
+                                          Subjectivity: ${res.subjectivity} <br>
+                                          Confidence: ${res.confidence} <br>
+                                          Agreement: ${res.agreement} <br>
+                                          Irony: ${res.irony}`;
+            resultsSummary.innerHTML =  `Summary: ${res.summary} `;
+
+            /*
+            score_tag: sentimentData.score_tag,
+            agreement: sentimentData.agreement,
+            subjectivity: sentimentData.subjectivity,
+            confidence: sentimentData.confidence,
+            irony: sentimentData.irony
+            */
         })
     } else {
         console.log(inputURL);

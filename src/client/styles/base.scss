@@ -77,7 +77,7 @@ p.intro-text{
     padding: 5px;
 }
 
-#results {
+#results-container {
     width: 50%;
     //display: flex;
     //justify-content: center;
@@ -86,12 +86,12 @@ p.intro-text{
     padding: 20px;
     border-radius: 5px;
 }
-#results h3{
+#results-container h3{
     display: block;
     text-decoration: underline;
     font-size: 1.25em;
 }
-#results div{
+#results-container div{
     display: block;
     width: 90%;
     margin-left: auto;

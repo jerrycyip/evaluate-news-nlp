@@ -50,12 +50,37 @@ app.get('/', function (req, res) {
 })
 
 // post method to recieve the URL from the client side
-app.post('/api', analyzeAPI);
+app.post('/api', callApis);
 
-async function analyzeAPI(req, res) {
+async function callApis(req, res) {
+    const sentimentInfo = await sentimentAPI(req, res);
+    const summaryInfo = await summaryAPI(req, res);
+    
+    sentimentInfo.summary = summaryInfo;
+    console.log(sentimentInfo);
+    res.send(sentimentInfo);
+}
+
+async function summaryAPI(req, res) {
+    let inputURL = req.body.url;
+    const summaryURL = `http://api.meaningcloud.com/summarization-1.0?key=${apiKey}&url=${inputURL}&sentences=3`
+    
+    const response = await fetch(summaryURL);
+    try {
+        const summaryData = await response.json()
+        const summary = summaryData.summary
+        console.log(summary);
+        return summary;
+    }
+    catch (error) {
+        console.log("error occured:", error);
+    }
+}
+
+async function sentimentAPI(req, res) {
     let inputURL = req.body.url;
     const sentimentURL = `https://api.meaningcloud.com/sentiment-2.1?key=${apiKey}&url=${inputURL}&lang=en`
-
+    
     const response = await fetch(sentimentURL);
     try {
         const sentimentData = await response.json();
@@ -64,10 +89,11 @@ async function analyzeAPI(req, res) {
             agreement: sentimentData.agreement,
             subjectivity: sentimentData.subjectivity,
             confidence: sentimentData.confidence,
-            irony: sentimentData.irony
+            irony: sentimentData.irony,
         }
         console.log(sentimentInfo);
-        res.send(sentimentInfo);
+        //res.send(sentimentInfo);
+        return sentimentInfo;
     }
     catch (error) {
         console.log("error occured:", error);

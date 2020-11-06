@@ -57,7 +57,7 @@ async function callApis(req, res) {
     const summaryInfo = await summaryAPI(req, res);
     
     sentimentInfo.summary = summaryInfo;
-    console.log(sentimentInfo);
+    console.log("sentimentInfo: ", sentimentInfo);
     res.send(sentimentInfo);
 }
 
@@ -69,7 +69,7 @@ async function summaryAPI(req, res) {
     try {
         const summaryData = await response.json()
         const summary = summaryData.summary
-        console.log(summary);
+       // console.log(summary);
         return summary;
     }
     catch (error) {
@@ -85,6 +85,7 @@ async function sentimentAPI(req, res) {
     try {
         const sentimentData = await response.json();
         const sentimentInfo = {
+            status: sentimentData.status,
             score_tag: sentimentData.score_tag,
             agreement: sentimentData.agreement,
             subjectivity: sentimentData.subjectivity,

@@ -20,8 +20,8 @@ async function handleSubmit(event) {
                                           Subjectivity: ${res.subjectivity} <br>
                                           Confidence: ${res.confidence} <br>
                                           Agreement: ${res.agreement} <br>
-                                          Irony: ${res.irony}`;
-            resultsSummary.innerHTML =  `Summary: ${res.summary} `;
+                                          Irony: ${res.irony}`;                             
+            resultsSummary.innerHTML =  `<strong style="font-size: 1.25em; font-weight:900; font-family: 'Kodchasan', sans-serif; text-decoration:underline">Article Summary:</strong> <br>${res.summary} `;
 
             /*
             score_tag: sentimentData.score_tag,
@@ -40,7 +40,7 @@ async function handleSubmit(event) {
 // update UI with the sentiment analysis results
 export function updateUI(data){
 //    const resultsContainer = document.getElementById('results');
-    console.log(data);
+    console.log("updateUI data:", data);
 }
 
 // Post fetch request to server with provided URL
@@ -57,7 +57,7 @@ export const postRequest  = async (url= '', data={})=>{
     });
     try {
         const newData = await response.json();
-        console.log("response data", newData);
+        //console.log("response data", newData);
         return newData;
     } catch (error) {
         console.log("error occurred:", error);

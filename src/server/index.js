@@ -39,8 +39,8 @@ app.use(bodyParser.urlencoded({
 app.use(express.static('dist'))
 
 //revisit this
-console.log(JSON.stringify(mockAPIResponse))
-console.log(__dirname)
+//console.log(JSON.stringify(mockAPIResponse))
+//console.log(__dirname)
 
 // routing for loading site
 app.get('/', function (req, res) {
@@ -91,7 +91,7 @@ async function sentimentAPI(req, res) {
             confidence: sentimentData.confidence,
             irony: sentimentData.irony,
         }
-        console.log(sentimentInfo);
+        console.log(sentimentData);
         //res.send(sentimentInfo);
         return sentimentInfo;
     }

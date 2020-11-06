@@ -109,11 +109,13 @@ p.intro-text{
     margin-right: auto;
 }
 #results{
-    font-family: 'Open+Sans', sans-serif;
+    //font-family: 'Open+Sans', sans-serif;
+    text-transform: capitalize;
 }
+
 #results-summary{
     //border: 2px solid #052741;
     padding-top: 15px;
-    font-family: 'Open+Sans', sans-serif;
+    //font-family: 'Open+Sans', sans-serif;
 
 }

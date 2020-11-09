@@ -55,7 +55,26 @@ app.post('/api', callApis);
 async function callApis(req, res) {
     const sentimentInfo = await sentimentAPI(req, res);
     const summaryInfo = await summaryAPI(req, res);
-    
+    switch(sentimentInfo.score_tag){
+        case "P+":
+            sentimentInfo.score_tag = "strong positive";
+            break;
+        case "P":
+            sentimentInfo.score_tag = "positive";
+            break;
+        case "NEU":
+            sentimentInfo.score_tag = "neutral";
+            break;
+        case "N":
+            sentimentInfo.score_tag = "negative";
+            break;
+        case "N+":
+            sentimentInfo.score_tag = "strong negative";
+            break;
+        case "NONE":
+            sentimentInfo.score_tag = "no sentiment detected";
+            break;
+    }
     sentimentInfo.summary = summaryInfo;
     console.log("sentimentInfo: ", sentimentInfo);
     res.send(sentimentInfo);

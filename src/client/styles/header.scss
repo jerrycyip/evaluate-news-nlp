@@ -38,6 +38,9 @@ h1 a {
 }
 
 @media only screen and (max-width: 450px){
+    header {
+        padding: 12px 25px;
+    }
     h1 {
         font-size: 1.75em;
     }
@@ -46,6 +49,9 @@ h1 a {
     }
 }
 @media only screen and (max-width: 380px){
+    header {
+        padding: 8px 18px;
+    }
     h1 {
         font-size: 1.4em;
     }

@@ -59,11 +59,13 @@ async function handleSubmit(event) {
     };
 }
 
+/*
 // update UI with the sentiment analysis results
 export function updateUI(data) {
     //    const resultsContainer = document.getElementById('results');
     console.log("updateUI data:", data);
 }
+*/
 
 // Post fetch request to server with provided URL
 export const postRequest = async (url = '', data = {}) => {

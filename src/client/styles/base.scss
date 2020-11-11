@@ -46,17 +46,18 @@ section {
 }
 #ai-image {
     width: 50%;
-    min-width: 315px;
+    min-width: 310px;
     height: auto;
     margin-top: 20px;
     border: 3px solid #052741;
     border-radius: 5px;
-    //border-top-right-radius: 5px;    
+    // image provided by https://pixabay.com/illustrations/artificial-intelligence-ai-robot-2228610/ 
+  
 }
 #intro-text {
     margin-top: 10px;
     width: 50%;
-    min-width: 315px;
+    min-width: 310px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -89,7 +90,7 @@ p.intro-text{
 
 #results-container {
     width: 50%;
-    min-width: 315px;
+    min-width: 310px;
     //display: flex;
     //justify-content: center;
     text-align: center;
@@ -145,7 +146,8 @@ sub{
 /* mobile responsive layout*/
 @media only screen and (max-width: 1100px){
     #ai-image {
-        width: 67%;  
+        width: 67%;
+        // image provided by https://pixabay.com/illustrations/artificial-intelligence-ai-robot-2228610/ 
     }
     #intro-text {
         width: 67%;  
@@ -156,7 +158,9 @@ sub{
 }
 @media only screen and (max-width: 950px){
     #ai-image {
-        width: 75%;  
+        width: 75%; 
+        // image provided by https://pixabay.com/illustrations/artificial-intelligence-ai-robot-2228610/ 
+
     }
     #intro-text {
         width: 75%;  
@@ -176,7 +180,9 @@ sub{
 }
 @media only screen and (max-width: 650px){
     #ai-image {
-        width: 88%;  
+        width: 88%;
+        // image provided by https://pixabay.com/illustrations/artificial-intelligence-ai-robot-2228610/ 
+          
     }
     #intro-text {
         width: 88%;  

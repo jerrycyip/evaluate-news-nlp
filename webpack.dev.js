@@ -5,17 +5,17 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
     entry: './src/client/index.js',
-    output: {
-        libraryTarget: 'var',
-        library: 'Client'
-    },
     mode: 'development',
-    devtool: 'source-map',
-    // address errors with latest loader/plugin versions:
     node: {
         fs: "empty",
         net: "empty"
      },
+     output: {
+        libraryTarget: 'var',
+        library: 'Client'
+    },
+    devtool: 'source-map',
+    // address errors with latest loader/plugin versions:
     //stats: 'verbose',
     module: {
         rules: [

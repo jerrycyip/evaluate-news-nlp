@@ -17,7 +17,7 @@ async function handleSubmit(event) {
                 const resultsSummary = document.getElementById('results-summary');
                 const urlInput = document.getElementById('url').value;
                 document.getElementById('url').value = "";
-
+// evaluate against possible error codes: https://www.meaningcloud.com/developer/documentation/error-codes
                 switch (res.status.code) {
                     case '212':
                         results.innerHTML = `Error: Unfortunately, MeaningCloud's API doesn't appear to be able to handle this article URL.  Please try a different url.`;
@@ -45,13 +45,6 @@ async function handleSubmit(event) {
                         resultsSummary.innerHTML = ``;
                 }
 
-                /*
-                score_tag: sentimentData.score_tag,
-                agreement: sentimentData.agreement,
-                subjectivity: sentimentData.subjectivity,
-                confidence: sentimentData.confidence,
-                irony: sentimentData.irony
-                */
             })
     } else {
         alert("Error: Invalid URL. Please check that the URL is a valid address (e.g. https://www.cnn.com/2021/01/01/newstory/index.html)");
@@ -60,7 +53,7 @@ async function handleSubmit(event) {
 }
 
 /*
-// update UI with the sentiment analysis results
+// optional: auxillary funciton to update UI with API results:
 export function updateUI(data) {
     //    const resultsContainer = document.getElementById('results');
     console.log("updateUI data:", data);

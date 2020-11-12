@@ -1,7 +1,7 @@
 # Project Instructions
 
 ## Project Description
-This project is part of Udacity's Front End Web Developer Nanodegree program.  The project requirements are to create a web tool that employs MeaningCloud's free APIs for Natural Language Processing (NLP) to analyze content from articles and blogs found on other websites. The motivation of the project is to further practice working with different environments and the many tools common in a front end role for developing, testing and deploying a production app, including the following:
+This is the fourth project for Udacity's Front End Web Developer Nanodegree program.  The project requirements are to create a web tool that employs MeaningCloud's free APIs for Natural Language Processing (NLP) to analyze content from articles and blogs found on other websites. The motivation of the project is to further practice working with different environments and the many tools common in a front end role for developing, testing and deploying a production app, including the following:
 - Setting up Webpack
 - Sass styles
 - Webpack Loaders and Plugins
@@ -12,11 +12,21 @@ This project is part of Udacity's Front End Web Developer Nanodegree program.  T
 ### Background on Natural Language Processing
 Whereas this project's main goals are to further understanding of the roles different tools and technologies play in the overall architecture of an application, it also simultaneously introduces the concept of Natural Language Processing (NLP). NLP is the ability of an application to understand the human language, written or oral.  Whereas some of my other GitHub repos for Machine Learning deal with the underlying concepts and technology for NLP (e.g. bag of words etc.), this specific project will instead outsource such functionality to a 3rd party -- MeaningCloud.com's free NLP APIs.  MeaningCloud's NLP APIs help analyze the content of user input articles and blogs to classify and summarize the information available in the article, including whether the content is subjective (opinion) or objective (fact-based) and whether it is positive, neutral, or negative in tone.
 
+## Result
+
+## Demo
+
 ## Tools required to develop and run this project, are as follows: 
 - text editor (e.g. [Atom](https://atom.io/)) or Integrated Development Environment - IDE (e.g. MS Visual Studio)
 - web browser (e.g. Chrome/Safari/Firefox)
-- Node.js
-- 3rd party Node.js packages listed in package.json: (e.g. express, body-parser, cors etc.) with actual packages included in the node_modules folder
+- Node.js (for webserver functionality)
+- 3rd party Node.js packages as listed in package.json, including:
+    - Webserver - Node.js
+    - Express (Web application framework)
+    - body-parser (middleware body parser)
+    - cors (cross origin routing)
+    - Webpack (Build Tool for setting up dev and prod environments)
+    - Service Worker (External Script for offline functionality)
 - a free developers account from MeaningCloud.com (required  if you wish to use your own API token for retrieving data)
 - (not required) This project and related requirements was tracked and managed via the following [kanban board](https://trello.com/b/1Qd52LoJ/nlp-udacity-project)
 

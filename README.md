@@ -47,7 +47,7 @@ The following loaders and plugins were installed for development, with Service W
 - (For css file minification for performance and website load size management)\
     npm i -D mini-css-extract-plugin
     npm i -D optimize-css-assets-webpack-plugin terser-webpack-plugin
-- (Optional: inclusion of images/logos on site )\
+- (Inclusion of images/logos on site )\
     npm i -D file-loader
     npm i -D html-loader
 - Install the following npm packages that are used by the express server:\

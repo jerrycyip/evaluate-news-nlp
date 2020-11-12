@@ -15,6 +15,7 @@ Whereas this project's main goals are to further understanding of the roles diff
 ## Result
 
 ## Demo
+![Natural Language Processing App](demo-nlp.mp4)
 
 ## Tools required to develop and run this project, are as follows: 
 - text editor (e.g. [Atom](https://atom.io/)) or Integrated Development Environment - IDE (e.g. MS Visual Studio)

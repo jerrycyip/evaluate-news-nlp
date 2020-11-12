@@ -17,7 +17,8 @@ Whereas this project's main goals are to further understanding of the roles diff
 ## Demo
 ![Natural Language Processing App](demo.gif)
 
-## Tools required to develop and run this project, are as follows: 
+## Tools required
+Tools required to develop and run this project are as follows: 
 - text editor (e.g. [Atom](https://atom.io/)) or Integrated Development Environment - IDE (e.g. MS Visual Studio)
 - web browser (e.g. Chrome/Safari/Firefox)
 - Node.js (for webserver functionality)

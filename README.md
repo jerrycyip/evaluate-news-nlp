@@ -64,20 +64,11 @@ npm i fetch-node --save-dev
 ## Setting up the API
 
 ### Step 1: Signup for an API key
-This project uses the MeaningCloud Sentiment Analysis API found [here](https://www.meaningcloud.com/developer/sentiment-analysis).  Once an account is created with MeaningCloud, you will be given a license key to start using the API. This API does not require an SDK so some subsequent setup steps are saved versus other project set ups (e.g. using Aylien API as was done for projects prior to July 2020 etc.).
+This project uses the MeaningCloud Sentiment Analysis API found [here](https://www.meaningcloud.com/developer/sentiment-analysis) as well as the Summary Analysis API founder [here](https://www.meaningcloud.com/developer/summarization).  Once an account is created with MeaningCloud, you will be given a license key to start using the API. This API does not require an SDK so some subsequent setup steps are saved versus other project set ups (e.g. using Aylien API as was done for projects prior to July 2020 etc.).
 
 
 ### Step 2: Environment Variables
-Next we need to declare our API keys, which will look something like this:
-```
-// set aylien API credentias
-var textapi = new aylien({
-  application_id: "your-api-id",
-  application_key: "your-key"
-});
-```
-
-...but there's a problem with this. We are about to put our personal API keys into a file, but when we push, this file is going to be available PUBLICLY on Github. Private keys, visible publicly are never a good thing. So, we have to figure out a way to make that not happen. The way we will do that is with environment variables. Environment variables are pretty much like normal variables in that they have a name and hold a value, but these variables only belong to your system and won't be visible when you push to a different environment like Github.
+Next we need to declare our API keys, as well as ensure they remain private keys as opposed to publicly visible on GitHub. We accomplish this with environment variables that are excluded when pushing to GitHub via configuration in our .gitignore file:
 
 - [ ] Use npm or yarn to install the dotenv package ```npm install dotenv```. This will allow us to use environment variables we set in a new file
 - [ ] Create a new ```.env``` file in the root of your project
@@ -96,33 +87,16 @@ dotenv.config();
 ```
 console.log(`Your API key is ${process.env.API_KEY}`);
 ```
-...Not that you would want to do that. This means that our updated API credential settings will look like this:
-```javascript
-// set aylien API credentials
-// NOTICE that textapi is the name I used, but it is arbitrary. 
-// You could call it aylienapi, nlp, or anything else, 
-//   just make sure to make that change universally!
-var textapi = new aylien({
-  application_id: process.env.API_ID,
-  application_key: process.env.API_KEY
-});
-```
 
-### Step 5: Using the API
+## Step 3: After adding MeaningCloud API
 
-We're ready to go! The API has a lot of different endpoints you can take a look at [here](https://docs.aylien.com/textapi/endpoints/#api-endpoints). And you can see how using the SDK simplifies the requests we need to make. 
-
-I won't provide further examples here, as it's up to you to create the various requests and make sure your server is set up appropriately.
-
-## After the Aylien API
-
-Once you are hooked up to the Aylien API, you are most of the way there! Along with making sure you are following all the requirements in the project rubric in the classroom, here are a few other steps to make sure you take.
+Once you are hooked up to the MeaningCloud API, you are most of the way there! Here are a few other steps to complete prior to deployment.
 
 - Parse the response body to dynamically fill content on the page.
 - Test that the server and form submission work, making sure to also handle error responses if the user input does not match API requirements.
-- Go back to the web pack config and add the setup for service workers. 
-- Test that the site is now available even when you stop your local server
+- Go back to the web pack prod config and add the setup for service workers. 
+- Test that the (prod) site is now available even when you stop your local server
 
-## Deploying
+## Future Enhancement(s)
 
-A great step to take with your finished project would be to deploy it! Unfortunately its a bit out of scope for me to explain too much about how to do that here, but checkout [Netlify](https://www.netlify.com/) or [Heroku](https://www.heroku.com/) for some really intuitive free hosting options.
+A great step to take with your finished project would be to deploy it! As it is out of scope for this project, you will have to checkout [Netlify](https://www.netlify.com/) or [Heroku](https://www.heroku.com/) for further info on free hosting options.

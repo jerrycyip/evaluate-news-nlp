@@ -60,8 +60,7 @@ The following loaders and plugins were installed for development, with Service W
 ## Setting up the API
 
 ### Step 1: Signup for an API key
-This project uses the MeaningCloud Sentiment Analysis API found [here](https://www.meaningcloud.com/developer/sentiment-analysis) as well as the Summary Analysis API founder [here](https://www.meaningcloud.com/developer/summarization).  Once an account is created with MeaningCloud, you will be given a license key to start using the API. This API does not require an SDK so some subsequent setup steps are saved versus other project set ups (e.g. using Aylien API as was done for projects prior to July 2020 etc.).
-
+This project uses the MeaningCloud Sentiment Analysis API found [here](https://www.meaningcloud.com/developer/sentiment-analysis) as well as the Summary Analysis API found [here](https://www.meaningcloud.com/developer/summarization).  Once an account is created with MeaningCloud, you will be given a license key to start using the API. This API does not require an SDK so set-up steps are minimal.
 
 ### Step 2: Environment Variables
 Next we need to declare our API keys, as well as ensure they remain private keys as opposed to publicly visible on GitHub. We accomplish this with environment variables that are excluded when pushing to GitHub via configuration in our .gitignore file:

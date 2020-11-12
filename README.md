@@ -35,23 +35,23 @@ Whereas this project's main goals are to further understanding of the roles diff
 
 The following loaders and plugins were installed for development, with Service Workers installed for production only.
 (Choose the necessary installation for your development mode and preferences)
-- (Babel: for transpiling ECMA2016+ JavaScript to standard JavaScript)
+- (Babel: for transpiling ECMA2016+ JavaScript to standard JavaScript)\
     npm i -D @babel/core @babel/preset-env babel-loader
-- (For creating separate designated css file that is transpiled from SASS)
+- (For creating separate designated css file that is transpiled from SASS)\
     npm i -D style-loader node-sass css-loader sass-loader
-- (To automate replacement of 'dist' folder with new bundled assets each time we rerun webpack build scripts)
+- (To automate replacement of 'dist' folder with new bundled assets each time we rerun webpack build scripts)\
     npm i -D clean-webpack-plugin
-- (For automatically including reference to bundled Javascript bundle in a script tag in html file for us)
+- (For automatically including reference to bundled Javascript bundle in a script tag in html file for us)\
     npm i -D html-webpack-plugin
-(For css file minification for performance and website load size management)
-npm i -D mini-css-extract-plugin
-npm i -D optimize-css-assets-webpack-plugin terser-webpack-plugin
-Also install the following npm packages that are used by the express server:
-npm i --save path
-npm i --save body-parser
-npm i --save cors
-install fetch-node (or axios) for api fetch requests to MeaningCloud's APIs
-npm i fetch-node --save-dev
+- (For css file minification for performance and website load size management)\
+    npm i -D mini-css-extract-plugin
+    npm i -D optimize-css-assets-webpack-plugin terser-webpack-plugin
+- Install the following npm packages that are used by the express server:\
+    npm i --save path\
+    npm i --save body-parser\
+    npm i --save cors\
+- Install fetch-node (or axios) for api fetch requests to MeaningCloud's APIs\
+    npm i fetch-node --save-dev
 
 ## Setting up the API
 

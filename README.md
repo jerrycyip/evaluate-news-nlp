@@ -31,18 +31,11 @@ Whereas this project's main goals are to further understanding of the roles diff
 - a free developers account from MeaningCloud.com (required  if you wish to use your own API token for retrieving data)
 - (not required) This project and related requirements was tracked and managed via the following [kanban board](https://trello.com/b/1Qd52LoJ/nlp-udacity-project)
 
-## Getting started
+## Installation & Configuration
 
-It would probably be good to first get your basic project setup and functioning. Follow the steps from the course up to Lesson 4 but don't add Service Workers just yet. We won't need the service workers during development and having extra caches floating around just means there's more potential for confusion. So, fork this repo and begin your project setup.
+The following loaders and plugins were installed for development, with Service Workers installed for production only:
 
-Remember that once you clone, you will still need to install everything:
-
-`cd` into your new folder and run:
-- `npm install`
-
-The following loaders and plugins were installed for development, with Service Workers installed for production:
-
-# Choose the necessary installation for your development mode
+### Choose the necessary installation for your development mode and preferences
 (Babel: for transpiling ECMA2016+ JavaScript to standard JavaScript)
 npm i -D @babel/core @babel/preset-env babel-loader
 (For creating separate designated css file that is transpiled from SASS)
@@ -88,7 +81,7 @@ dotenv.config();
 console.log(`Your API key is ${process.env.API_KEY}`);
 ```
 
-## Step 3: After adding MeaningCloud API
+### Step 3: After adding MeaningCloud API
 
 Once you are hooked up to the MeaningCloud API, you are most of the way there! Here are a few other steps to complete prior to deployment.
 

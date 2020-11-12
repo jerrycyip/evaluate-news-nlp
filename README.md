@@ -49,7 +49,7 @@ The following loaders and plugins were installed for development, with Service W
 - Install the following npm packages that are used by the express server:\
     npm i --save path\
     npm i --save body-parser\
-    npm i --save cors\
+    npm i --save cors
 - Install fetch-node (or axios) for api fetch requests to MeaningCloud's APIs\
     npm i fetch-node --save-dev
 

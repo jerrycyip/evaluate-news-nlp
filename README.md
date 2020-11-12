@@ -36,7 +36,8 @@ Whereas this project's main goals are to further understanding of the roles diff
 The following loaders and plugins were installed for development, with Service Workers installed for production only.
 (Choose the necessary installation for your development mode and preferences)
 - (Babel: for transpiling ECMA2016+ JavaScript to standard JavaScript)\
-    npm i -D @babel/core @babel/preset-env babel-loader
+    npm i -D @babel/core @babel/preset-env babel-loader\
+    (short for "npm install --save-dev @babel/core @babel/preset-env babel-loader")
 - (For creating separate designated css file that is transpiled from SASS)\
     npm i -D style-loader node-sass css-loader sass-loader
 - (To automate replacement of 'dist' folder with new bundled assets each time we rerun webpack build scripts)\
@@ -46,6 +47,9 @@ The following loaders and plugins were installed for development, with Service W
 - (For css file minification for performance and website load size management)\
     npm i -D mini-css-extract-plugin
     npm i -D optimize-css-assets-webpack-plugin terser-webpack-plugin
+- (For inclusing of images on site )\
+    npm i -D file-loader
+    npm i -D html-loader
 - Install the following npm packages that are used by the express server:\
     npm i --save path\
     npm i --save body-parser\

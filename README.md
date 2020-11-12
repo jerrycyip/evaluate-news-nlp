@@ -1,8 +1,7 @@
 # Project Instructions
 
-This repo is your starter code for the project. It is the same as the starter code we began with in lesson 2. Install and configure Webpack just as we did in the course. Feel free to refer to the course repo as you build this one, and remember to make frequent commits and to create and merge branches as necessary!
-
-The goal of this project is to give you practice with:
+## Project Description
+This project is part of Udacity's Front End Web Developer Nanodegree program.  The project requirements are to create a web tool that employs MeaningCloud's free APIs for Natural Language Processing (NLP) to analyze content from articles and blogs found on other websites. The motivation of the project is to further practice working with different environments and the many tools common in a front end role for developing, testing and deploying a production app, including the following:
 - Setting up Webpack
 - Sass styles
 - Webpack Loaders and Plugins
@@ -10,13 +9,16 @@ The goal of this project is to give you practice with:
 - Service workers
 - Using APIs and creating requests to external urls
 
-On top of that, I want to introduce you to the topic of Natural Language Processing. NLPs leverage machine learning and deep learning create a program that can interpret natural human speech. Systems like Alexa, Google Assistant, and many voice interaction programs are well known to us, but understanding human speech is an incredibly difficult task and requires a lot of resources to achieve. Full disclosure, this is the Wikipedia definition, but I found it to be a clear one:
+### Background on Natural Language Processing
+Whereas this project's main goals are to further understanding of the roles different tools and technologies play in the overall architecture of an application, it also simultaneously introduces the concept of Natural Language Processing (NLP). NLP is the ability of an application to understand the human language, written or oral.  Whereas some of my other GitHub repos for Machine Learning deal with the underlying concepts and technology for NLP (e.g. bag of words etc.), this specific project will instead outsource such functionality to a 3rd party -- MeaningCloud.com's free NLP APIs.  MeaningCloud's NLP APIs help analyze the content of user input articles and blogs to classify and summarize the information available in the article, including whether the content is subjective (opinion) or objective (fact-based) and whether it is positive, neutral, or negative in tone.
 
-> Natural language processing (NLP) is a subfield of computer science, information engineering, and artificial intelligence
-concerned with the interactions between computers and human (natural) languages, in particular how to program computers to
-process and analyze large amounts of natural language data.
-
-You could spend years and get a masters degree focusing on the details of creating NLP systems and algorithms. Typically, NLP programs require far more resources than individuals have access to, but a fairly new API called Aylien has put a public facing API in front of their NLP system. We will use it in this project to determine various attributes of an article or blog post.
+## Tools required to develop and run this project, are as follows: 
+- text editor (e.g. [Atom](https://atom.io/)) or Integrated Development Environment - IDE (e.g. MS Visual Studio)
+- web browser (e.g. Chrome/Safari/Firefox)
+- Node.js
+- 3rd party Node.js packages listed in package.json: (e.g. express, body-parser, cors etc.) with actual packages included in the node_modules folder
+- a free developers account from MeaningCloud.com (required  if you wish to use your own API token for retrieving data)
+- (not required) This project and related requirements was tracked and managed via the following [kanban board](https://trello.com/b/1Qd52LoJ/nlp-udacity-project)
 
 ## Getting started
 

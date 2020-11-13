@@ -55,7 +55,7 @@ The following loaders and plugins were installed for development, with Service W
     npm i --save path\
     npm i --save body-parser\
     npm i --save cors
-- Install fetch-node (or axios) for api fetch requests to MeaningCloud's APIs\
+- Install fetch-node (or axios) for making api fetch requests to MeaningCloud's APIs\
     npm i fetch-node --save-dev
 
 ## Setting up the API

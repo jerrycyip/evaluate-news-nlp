@@ -43,7 +43,7 @@ The following loaders and plugins were installed for development, with Service W
     npm i -D style-loader node-sass css-loader sass-loader
 - (To automate replacement of 'dist' folder with new bundled assets each time we rerun webpack build scripts)\
     npm i -D clean-webpack-plugin
-- (For automatically including reference to bundled Javascript bundle in a script tag in html file for us)\
+- (For automatically including reference to bundled Javascript bundle in a script tag in our html file)\
     npm i -D html-webpack-plugin
 - (For css file minification for performance and website load size management)\
     npm i -D mini-css-extract-plugin
@@ -55,7 +55,7 @@ The following loaders and plugins were installed for development, with Service W
     npm i --save path\
     npm i --save body-parser\
     npm i --save cors
-- Install fetch-node (or axios) for making api fetch requests to MeaningCloud's APIs\
+- Install fetch-node (or alternatively axios) for making api fetch requests to MeaningCloud's APIs\
     npm i fetch-node --save-dev
 
 ## Setting up the API

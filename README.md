@@ -56,7 +56,7 @@ The following loaders and plugins were installed for development, with Service W
     npm i --save body-parser\
     npm i --save cors
 - Install fetch-node (or alternatively axios) for making api fetch requests to MeaningCloud's APIs\
-    npm i fetch-node --save-dev
+    npm i fetch-node --save-dev    
 
 ## Setting up the API
 
@@ -90,7 +90,8 @@ Once you are hooked up to the MeaningCloud API, you are most of the way there! H
 
 - Parse the response body to dynamically fill content on the page.
 - Test that the server and form submission work, making sure to also handle error responses if the user input does not match API requirements.
-- Go back to the web pack prod config and add the setup for service workers. 
+- Go back to the web pack prod config and add the setup for service workers:
+    npm i -D workbox-webpack-plugin
 - Test that the (prod) site is now available even when you stop your local server
 
 ## Future Enhancement(s)

@@ -41,6 +41,8 @@ The following loaders and plugins were installed for development, with Service W
     (short for "npm install --save-dev @babel/core @babel/preset-env babel-loader")
 - (For creating separate designated css file that is transpiled from SASS)\
     npm i -D style-loader node-sass css-loader sass-loader
+- (For hot/live reloading of the page, only for Development mode, and automatically re-build of the application)
+    npm i -D webpack-dev-server
 - (To automate replacement of 'dist' folder with new bundled assets each time we rerun webpack build scripts)\
     npm i -D clean-webpack-plugin
 - (For automatically including reference to bundled Javascript bundle in a script tag in our html file)\

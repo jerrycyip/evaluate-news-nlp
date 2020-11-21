@@ -36,6 +36,8 @@ Tools required to develop and run this project are as follows:
 
 The following loaders and plugins were installed for development, with Service Workers installed for production only.
 (Choose the necessary installation for your development mode and preferences)
+- Install Webpack and the command line instructions (CLI) tool:
+    npm i webpack webpack-cli 
 - (Babel: for transpiling ECMA2016+ JavaScript to standard JavaScript)\
     npm i -D @babel/core @babel/preset-env babel-loader\
     (short for "npm install --save-dev @babel/core @babel/preset-env babel-loader")

@@ -38,10 +38,6 @@ app.use(bodyParser.urlencoded({
 // routing of site to directory of bundled assets
 app.use(express.static('dist'))
 
-//revisit this
-//console.log(JSON.stringify(mockAPIResponse))
-//console.log(__dirname)
-
 // routing for loading site
 app.get('/', function (req, res) {
     //res.sendFile("dist/index.html");

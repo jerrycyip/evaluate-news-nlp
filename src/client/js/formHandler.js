@@ -20,15 +20,18 @@ async function handleSubmit(event) {
 // evaluate against possible error codes: https://www.meaningcloud.com/developer/documentation/error-codes
                 switch (res.status.code) {
                     case '212':
-                        results.innerHTML = `Error: Unfortunately, MeaningCloud's API doesn't appear to be able to handle this article URL.  Please try a different url.`;
+                        results.innerHTML = `Error: Unfortunately, MeaningCloud's API doesn't appear to be able to handle this article URL.  Please try a different url. <br>
+                                             Input URL: ${urlInput}`;
                         resultsSummary.innerHTML = ``;
                         break;
                     case '103':
-                        results.innerHTML = `Error: Unfortunately, this article exceeds MeaningCloud API's size limit of 50,000 words.  Please try a different url.`;
+                        results.innerHTML = `Error: Unfortunately, this article exceeds MeaningCloud API's size limit of 50,000 words.  Please try a different url. <br>
+                                             Input URL: ${urlInput} `;
                         resultsSummary.innerHTML = ``;
                         break;
                     case '104':
-                        results.innerHTML = `Error: We have exceeded the maximum request frequency (2 requests/second).  Please try again later.`;
+                        results.innerHTML = `Error: We have exceeded the maximum request frequency (2 requests/second).  Please try again later. <br>
+                                             Input URL: ${urlInput}`;
                         resultsSummary.innerHTML = ``;
                         break;
                     case '0':
@@ -41,7 +44,8 @@ async function handleSubmit(event) {
                         resultsSummary.innerHTML = `<strong style="font-size: 1.25em; font-weight:900; font-family: 'Kodchasan', sans-serif; text-decoration:underline">Article Summary:</strong> <br>${res.summary} `;
                         break;
                     default:
-                        results.innerHTML = `Error: An unexpected error has occured with MeaningCloud's API.  Please try a different url.`;
+                        results.innerHTML = `Error: An unexpected error has occured with MeaningCloud's API.  Please try a different url. <br>
+                                             Input URL: ${urlInput}`;
                         resultsSummary.innerHTML = ``;
                 }
 
@@ -61,7 +65,7 @@ export function updateUI(data) {
 */
 
 // Post fetch request to server with provided URL
-export const postRequest = async (url = '', data = {}) => {
+const postRequest = async (url = '', data = {}) => {
     console.log("postRequest executing", data);
     const response = await fetch(url, {
         method: 'POST',

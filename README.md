@@ -1,5 +1,11 @@
 # Project Instructions
 
+
+## Result
+
+## Demo
+![Natural Language Processing App](demo.gif)
+
 ## Project Description
 This is the fourth project for Udacity's Front End Web Developer Nanodegree program.  The project requirements are to create a web tool that employs MeaningCloud's free APIs for Natural Language Processing (NLP) to analyze content from articles and blogs found on other websites. The motivation of the project is to further practice working with different environments and the many tools common in a front end role for developing, testing and deploying a production app, including the following:
 - Setting up Webpack
@@ -12,10 +18,6 @@ This is the fourth project for Udacity's Front End Web Developer Nanodegree prog
 ### Background on Natural Language Processing
 Whereas this project's main goals are to further understanding of the roles different tools and technologies play in the overall architecture of an application, it also simultaneously introduces the concept of Natural Language Processing (NLP). NLP is the ability of an application to understand the human language, written or oral.  Whereas some of my other GitHub repos for Machine Learning deal with the underlying concepts and technology for NLP (e.g. bag of words etc.), this specific project will instead outsource such functionality to a 3rd party -- MeaningCloud.com's free NLP APIs.  MeaningCloud's NLP APIs help analyze the content of user input articles and blogs to classify and summarize the information available in the article, including whether the content is subjective (opinion) or objective (fact-based) and whether it is positive, neutral, or negative in tone.
 
-## Result
-
-## Demo
-![Natural Language Processing App](demo.gif)
 
 ## Tools required
 Tools required to develop and run this project are as follows: 
